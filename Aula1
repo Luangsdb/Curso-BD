@@ -1,0 +1,66 @@
+CREATE TABLE estado(
+id INT PRIMARY KEY,
+nome VARCHAR(200),
+sigla CHAR(2),
+ativo CHAR(1), 
+data_cadastro DATETIME
+);
+
+CREATE TABLE estado(
+id INT PRIMARY KEY
+,nome VARCHAR(200) 
+,sigla CHAR(2) 
+,ativo CHAR(1) 
+,data_cadastro DATETIME 
+);
+
+
+INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (1,'PARANÁ','PR','S','2020-12-15');	
+SELECT id, nome, sigla, ativo, data_cadastro FROM estado;											
+INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (2,'PARANÁ','PR','S','2020-12-15');	
+INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (3,NULL,NULL,'S','2020-12-15'); 		
+INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (4,'SÃO PAULO','SP',8,'2020-12-15');	
+
+DROP TABLE IF EXISTS estado;
+
+CREATE TABLE estado(
+id INT NOT NULL PRIMARY KEY
+,nome VARCHAR(200) NOT NULL UNIQUE  
+,sigla CHAR(2) NOT NULL UNIQUE
+,ativo CHAR(1) NOT NULL 
+,data_cadastro DATETIME NOT NULL
+,CHECK (ativo IN ('S', 'N') )  
+);
+
+INSERT INTO estado (id,nome,sigla,ativo,data_cadastro) VALUES (1,'PARANÁ','PR','S','2020-12-15');
+
+DROP TABLE IF EXISTS estado;
+
+CREATE TABLE estado(
+id INT NOT NULL 
+,nome VARCHAR(200) NOT NULL UNIQUE  
+,sigla CHAR(2) NOT NULL UNIQUE
+,ativo CHAR(1) NOT NULL 
+,data_cadastro DATETIME NOT NULL
+,CONSTRAINT pk_estado PRIMARY KEY (id) 
+,CONSTRAINT coluna_ativo_deve_ser_S_ou_N CHECK (ativo IN ('S', 'N') ) 
+);
+
+DROP TABLE IF EXISTS estado;
+
+CREATE TABLE estado(
+id INT NOT NULL AUTO_INCREMENT
+,nome VARCHAR(200) NOT NULL UNIQUE  
+,sigla CHAR(2) NOT NULL UNIQUE
+,ativo CHAR(1) NOT NULL DEFAULT 'S'
+,data_cadastro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+,CONSTRAINT pk_estado PRIMARY KEY (id) 
+,CONSTRAINT coluna_ativo_deve_ser_S_ou_N CHECK (ativo IN ('S', 'N') ) 
+);
+
+INSERT INTO estado (nome,sigla) VALUES ('PARANÁ','PR');
+INSERT INTO estado (nome,sigla) VALUES ('SÃO PAULO','SP');
+
+INSERT INTO estado (nome,sigla,ativo) VALUES ('MATO GROSSO','MT','N');
+
+SELECT id,nome,sigla,ativo,data_cadastro FROM estado;
