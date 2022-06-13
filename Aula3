@@ -1,0 +1,22 @@
+UPDATE estado SET nome = 'PARANÁ' WHERE id = 57;
+UPDATE estado SET nome = 'PARANÁ' WHERE estado.nome = 'PARANA';
+UPDATE estado SET ativo = 'S';
+SELECT id FROM estado WHERE nome = 'PARANÁ';
+
+UPDATE cidade SET
+nome = 'MARINGÁ'
+, estado_id = 15
+, ativo = 'N'
+, data_cadastro = '2020-11-15'
+WHERE id = 97;
+
+SELECT * FROM cidade WHERE id = 97;
+DELETE FROM estado WHERE id = 57;
+DELETE FROM estado WHERE nome = 'PARANÁ';
+DELETE FROM cliente;
+DELETE FROM estado WHERE id = 23;
+DELETE FROM cidade WHERE cidade_id = 23;
+DELETE FROM estado WHERE id = 23;
+
+ALTER TABLE nome_tabela MODIFY COLUMN nome_coluna INT;
+ALTER TABLE nome_tabela MODIFY COLUMN nome_coluna INT;
