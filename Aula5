@@ -1,0 +1,13 @@
+INSERT INTO estado VALUES (NULL,'Tocantins','TO','S','2021-05-02'); 
+INSERT INTO estado VALUES (NULL,'Mato Grosso do Sul','MS','S','2021-05-03'); 
+INSERT INTO estado VALUES (NULL,'Mato Grosso','MT','S','2021-05-04');
+
+INSERT INTO estado (nome,sigla,ativo,data_cadastro) VALUES ('Maranhão','MA','S','2021-05-07');
+INSERT INTO estado (nome,sigla,ativo,data_cadastro) VALUES ('Pará','PA','S','2022-05-08');
+
+INSERT INTO estado (nome,sigla) VALUES ('Bahia','BA'); 
+INSERT INTO estado (nome,sigla) VALUES ('São Paulo','SP'); 
+
+INSERT INTO cidade (id,nome,estado_id,ativo,data_cadastro) VALUES (NULL, 'Posse',1,'S','2021-06-30'); 
+INSERT INTO cidade (nome,estado_id,ativo,data_cadastro) VALUES ('Posse',1,'S','2022-07-30');
+INSERT INTO cidade (nome,estado_id) VALUES ('Posse',1);
