@@ -1,0 +1,24 @@
+UPDATE estado SET nome = 'PARANA' WHERE id = 1;
+
+UPDATE estado SET nome = 'PARANÁ', ativo = 'N' WHERE id = 1;
+
+UPDATE estado SET nome = 'Paraná', ativo = 'S', data_cadastro = '2020-10-15' WHERE id = 1;
+
+UPDATE estado SET data_cadastro = CURRENT_TIMESTAMP WHERE id = 1;
+
+UPDATE estado SET nome = 'PARANÁ', data_cadastro = DEFAULT WHERE id = 1;
+
+UPDATE estado SET nome = 'PARANA' WHERE id = 1;
+UPDATE estado SET nome = 'PARANA' WHERE nome = 'PARANÁ';
+UPDATE estado SET nome = 'PARANA' WHERE sigla = 'PR';
+
+UPDATE cidade SET ativo = 'N' WHERE estado_id = 1;
+
+DELETE FROM cidade WHERE id = 1;
+
+DELETE FROM cidade WHERE estado_id = 1;
+
+DELETE FROM cidade;
+
+SELECT * FROM estado;
+SELECT * FROM cidade;
