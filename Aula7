@@ -1,0 +1,10 @@
+1- O JOIN combina colunas de uma ou mais tabelas em um banco de dados relacional. Ela cria um conjunto que pode ser salvo como uma tabela ou usado da forma como está.
+
+2- A sintaxe do JOIN sempre deve ser escrita em maiúscula.
+
+4- Existem varios tipos de JOINS e para cada um deles tem uma situação específica, saber ultilizar os varios tipos de  JOINS
+   é essencial para que o resultado tenha sentido.
+
+5- Existem vários tipos de JOIN, por exemplo: LEFT JOIN que é o JOIN a esquerda, OUTER JOIN que é JOIN a direita,
+   INNER JOIN usado para selecionar as linhas que possuem equivalência.Para que o SELECT retorne alguma linha é necessário
+   que haja pelo menos um registro em ambas tabelas.
